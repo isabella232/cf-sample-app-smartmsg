@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Swisscom Smart Messaging Demo</h1>
+
+<h2>Send a SMS</h2>
+
+<form action="sendsms" method="post">
+    Target mobile number: <input type="text" name="to">
+    Message text: <input type="text" name="text">
+    <input type="submit">
+</form>
+
+<h2>Validate a phone number</h2>
+
+<form action="sendtoken" method="post">
+    Mobile number to validate: <input type="text" name="to">
+    <input type="submit">
+</form>
+
+</body>
+</html>
