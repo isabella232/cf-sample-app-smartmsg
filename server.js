@@ -31,7 +31,7 @@ function getClientId() {
  */
 app.post('/sendsms', function (req, res, next) {
     var client_id = getClientId();
-    console.log('info:', 'Send message "' + req.body.text + '" TO ' + req.body.to + ' under usage of client_id: ' + client_id + ' ');
+    console.log('info:', 'Send message "' + req.body.text + '" to ' + req.body.to + ' under usage of client_id: ' + client_id + ' ');
 
     var options = {
         url: 'https://api.swisscom.com/messaging/sms',
@@ -67,7 +67,7 @@ app.post('/sendsms', function (req, res, next) {
 app.post('/sendtoken', function (req, res, next) {
 
     var client_id = getClientId();
-    console.log('info:', 'Send message "' + req.body.text + '" TO ' + req.body.to + ' under usage of client_id: ' + client_id + ' ');
+    console.log('info:', 'Send token to ' + req.body.to + ' under usage of client_id: ' + client_id + ' ');
 
     req.session.to = req.body.to;
 
@@ -108,7 +108,7 @@ app.post('/sendtoken', function (req, res, next) {
 app.post('/validate', function (req, res, next) {
 
     var client_id = getClientId();
-    console.log('info:', 'Send message "' + req.body.text + '" TO ' + req.body.to + ' under usage of client_id: ' + client_id + ' ');
+    console.log('info:', 'Validate token "' + req.body.token + '" for number ' + req.session.to + ' under usage of client_id: ' + client_id + ' ');
 
     var options = {
         url: 'https://api.swisscom.com/messaging/tokenvalidation/' + req.session.to + '/' + req.body.token,
