@@ -1,6 +1,8 @@
 # cf-sample-app-smartmsg
 A sample app which demonstrates how to use the Smart Messaging service on the Swisscom Application Cloud
 
+<img src="img/overview.png" />
+
 ## Installation.
 Open the Swisscom AppCloud Developer Console: https://developer.swisscom.com
 
